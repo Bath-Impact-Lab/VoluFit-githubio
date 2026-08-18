@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Predicting Longitudinal Changes in Transtibial Residual Limb Morphology</title>
+  <meta name="description" content="A pilot study using serial 3D scans to predict longitudinal changes in transtibial residual limb morphology.">
+  <meta name="keywords" content="residual limb, transtibial amputation, prosthetics, 3D scanning, longitudinal morphology, machine learning, VoluFit">
+  <meta name="author" content="Elena Seminati, Trishan Dissanayake, Mark Townsend, Jake Willott, Alexander Power">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Predicting Longitudinal Changes in Transtibial Residual Limb Morphology">
+  <meta property="og:description" content="A pilot study using serial 3D scans to forecast future residual limb shape.">
+  <meta property="og:image" content="https://volufit.cs.bath.ac.uk/static/images/volufit-banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Predicting Longitudinal Changes in Transtibial Residual Limb Morphology">
+  <meta name="twitter:description" content="A pilot study using serial 3D scans to forecast future residual limb shape.">
+  <meta name="twitter:image" content="https://volufit.cs.bath.ac.uk/static/images/volufit-banner.png">
+
+  <meta name="citation_title" content="Predicting Longitudinal Changes in Transtibial Residual Limb Morphology from Serial 3D Scans">
+  <meta name="citation_author" content="Seminati, Elena">
+  <meta name="citation_author" content="Dissanayake, Trishan">
+  <meta name="citation_author" content="Townsend, Mark">
+  <meta name="citation_author" content="Willott, Jake">
+  <meta name="citation_author" content="Power, Alexander">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="https://volufit.cs.bath.ac.uk/static/pdfs/residual-limb-paper.pdf">
+
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Predicting Longitudinal Changes in Transtibial Residual Limb Morphology from Serial 3D Scans",
+    "description": "A pilot study investigating whether longitudinal 3D residual limb scans can predict future changes in transtibial residual limb morphology.",
+    "author": [
+      { "@type": "Person", "name": "Elena Seminati" },
+      { "@type": "Person", "name": "Trishan Dissanayake" },
+      { "@type": "Person", "name": "Mark Townsend" },
+      { "@type": "Person", "name": "Jake Willott" },
+      { "@type": "Person", "name": "Alexander Power" }
+    ],
+    "datePublished": "2026",
+    "isAccessibleForFree": true,
+    "url": "https://volufit.cs.bath.ac.uk/"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <main id="main-content">
+    <section class="publication-header">
+      <div class="container narrow has-text-centered">
+        <h1>Predicting Longitudinal Changes in Transtibial Residual Limb Morphology from Serial 3D Scans</h1>
+
+        <div class="publication-authors">
+          <span class="author-block">Elena Seminati</span>,
+          <span class="author-block">Trishan Dissanayake</span>,
+          <span class="author-block">Mark Townsend</span>,
+          <span class="author-block">Jake Willott</span>,
+          <span class="author-block">Alexander Power</span>
+        </div>
+        <div class="publication-affiliation">University of Bath, United Kingdom</div>
+        <div class="publication-venue">Working paper, 2026</div>
+
+        <div class="publication-links" aria-label="Project links">
+          <a class="button" href="static/pdfs/residual-limb-paper.pdf">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6zM14 2v5h5M9 13h6M9 17h6"/></svg>
+            Paper
+          </a>
+          <a class="button" href="#video">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 8 6 4-6 4z"/><circle cx="12" cy="12" r="10"/></svg>
+            Video
+          </a>
+          <a class="button" href="https://github.com/Bath-Impact-Lab/VoluFit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 4v-3.5c0-1 .1-1.4-.5-2 3-.3 6-1.5 6-6a4.7 4.7 0 0 0-1.3-3.3A4.4 4.4 0 0 0 19 3s-1-.3-3.5 1.3a12 12 0 0 0-6.5 0C6.5 2.7 5.5 3 5.5 3a4.4 4.4 0 0 0-.2 3.2A4.7 4.7 0 0 0 4 9.5c0 4.5 3 5.7 6 6-.5.4-.6 1-.6 2V21"/></svg>
+            Code
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="teaser" id="video">
+      <div class="container">
+        <video controls playsinline preload="metadata" poster="static/images/volufit-video-poster.jpg">
+          <source src="static/videos/volufit.mp4" type="video/mp4">
+          Your browser does not support embedded video. <a href="static/videos/volufit.mp4">Download the demonstration video</a>.
+        </video>
+        <h2 class="teaser-caption">VoluFit uses 3D surface scans to estimate how residual limb geometry may change over time.</h2>
+      </div>
+    </section>
+
+    <section class="section section-grey" id="abstract">
+      <div class="container content">
+        <h2>Abstract</h2>
+        <p>
+          Residual limbs change over time due to postoperative healing, muscle atrophy, oedema, body-weight fluctuation, activity and ageing. These changes can affect the fit of a prosthetic socket and may lead to discomfort, skin complications and reduced prosthetic use. This pilot study investigates whether longitudinal three-dimensional (3D) residual limb scans can be used to predict future changes in transtibial residual limb morphology.
+        </p>
+        <p>
+          Serial scans collected over approximately nine months were represented using 100 horizontal disks and 360 radial measurements per disk. A linear-regression model predicted scaling at each of the resulting 36,000 vertices. The selected model used time since amputation and normalised residual limb geometry, achieving a mean root mean squared error (RMSE) of 3.66 mm during cross-validation and 2.65 mm on two independent test participants. These preliminary results demonstrate feasibility, but require validation in a substantially larger and more diverse cohort before clinical use.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="container content">
+        <h2>Method</h2>
+        <p>
+          Twenty-one participants were recruited through the NHS Bristol Centre for Enablement. Following withdrawals and exclusions, the final analysis included 12 transtibial participants. Participants were invited to attend nine sessions, approximately four weeks apart, with the first session taking place 6–17 weeks after amputation. At each session the residual limb was scanned in triplicate using an Artec Eva structured-light scanner.
+        </p>
+
+        <div class="method-diagram" role="img" aria-label="A 3D residual limb scan is divided into 100 disks with 360 measurements each, processed by predictive models, and reconstructed as a future 3D model">
+          <div class="method-step">
+            <span class="method-icon limb-icon" aria-hidden="true"></span>
+            <strong>3D limb scan</strong>
+            <small>Structured-light surface scan</small>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="method-step">
+            <span class="method-icon disk-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+            <strong>Disk representation</strong>
+            <small>100 disks × 360 angles</small>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="method-step">
+            <span class="method-icon model-icon" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <strong>Predictive model</strong>
+            <small>36,000 linear regressions</small>
+          </div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="method-step">
+            <span class="method-icon result-icon" aria-hidden="true"></span>
+            <strong>Future geometry</strong>
+            <small>Predicted 3D limb shape</small>
+          </div>
+        </div>
+        <p class="figure-caption"><strong>Figure 1.</strong> Simplified prediction pipeline. Each scan is converted into a consistent radial representation, scaled by the predictive model and reconstructed as a future 3D geometry.</p>
+
+        <h3>Model development</h3>
+        <p>
+          Ten participants were assigned to training and validation, with two held out for independent testing. A leave-two-out cross-validation procedure generated 45 models for each predictor configuration. Five configurations were compared: no additional participant feature, age, height, estimated tibial length, and normalised residual limb mass. Each configuration also used days after amputation and normalised angle length.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-grey" id="results">
+      <div class="container content">
+        <h2>Results</h2>
+        <p>
+          The model with no additional participant feature produced the lowest and most consistent validation error. Although normalised limb mass produced a marginally lower test RMSE, the simpler model was selected because of its stronger validation performance and comparable independent test result.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Predictive model</th>
+                <th>Validation RMSE (mm)</th>
+                <th>Test RMSE (mm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="selected-result">
+                <td>No additional feature <span>Selected</span></td>
+                <td>3.66</td>
+                <td>2.65</td>
+              </tr>
+              <tr>
+                <td>Estimated full tibia length</td>
+                <td>9.65</td>
+                <td>2.69</td>
+              </tr>
+              <tr>
+                <td>Normalised limb mass</td>
+                <td>8.48</td>
+                <td>2.64</td>
+              </tr>
+              <tr>
+                <td>Participant age</td>
+                <td>6.71</td>
+                <td>3.70</td>
+              </tr>
+              <tr>
+                <td>Participant height</td>
+                <td>6.27</td>
+                <td>14.02</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="figure-caption"><strong>Table 1.</strong> Mean RMSE for the five predictive model configurations. The independent test set contained two participants.</p>
+      </div>
+    </section>
+
+    <section class="section" id="discussion">
+      <div class="container content">
+        <h2>Clinical relevance</h2>
+        <p>
+          A validated model of future residual limb morphology could support proactive rather than reactive prosthetic management. Predicted changes may eventually help indicate when reassessment or socket modification is appropriate, particularly during the early post-amputation period. Visualising expected changes could also support patient education and self-management.
+        </p>
+        <p>
+          These applications remain prospective. The model is a research proof of concept and should complement, not replace, professional clinical assessment.
+        </p>
+
+        <h2>Limitations and future work</h2>
+        <ul>
+          <li>The final dataset contained only 12 participants and the independent test set contained two.</li>
+          <li>The study included transtibial participants only and was predominantly male.</li>
+          <li>Day-zero geometry was estimated because scanning did not begin immediately after amputation.</li>
+          <li>The model represents morphological change through radial scaling and may not capture more complex 3D deformation.</li>
+        </ul>
+        <p>
+          Future work should use larger and more diverse longitudinal datasets, explore accessible smartphone-based scanning, incorporate additional clinical and behavioural factors, and evaluate more flexible modelling approaches.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-grey" id="citation">
+      <div class="container content">
+        <div class="citation-heading">
+          <h2>Citation</h2>
+          <button class="copy-button" type="button" data-copy-button>Copy BibTeX</button>
+        </div>
+        <p class="citation-note">Provisional citation for the current working paper. Update when the final author list and venue are confirmed.</p>
+        <pre><code id="bibtex">@misc{seminati2026volufit,
+  title  = {Predicting Longitudinal Changes in Transtibial Residual Limb Morphology from Serial 3D Scans},
+  author = {Seminati, Elena and Dissanayake, Trishan and Townsend, Mark and Willott, Jake and Power, Alexander},
+  year   = {2026},
+  note   = {Working paper}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container has-text-centered">
+      <p>This website is based on the <a href="https://nerfies.github.io/">Nerfies</a> academic project page template.</p>
+      <p><a href="https://github.com/Bath-Impact-Lab/VoluFit">VoluFit</a> · University of Bath</p>
+    </div>
+  </footer>
+
+  <script src="static/js/index.js"></script>
+</body>
+</html>
